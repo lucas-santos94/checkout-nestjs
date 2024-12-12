@@ -12,6 +12,11 @@ export class CustomerController {
     return this.customerService.store(createCustomerDto);
   }
 
+  @Get()
+  findAll() {
+    return this.customerService.findAll();
+  }
+
   @Get('/:customerId')
   findById(@Param() params: CustomerIdDto) {
     return this.customerService.findById(params.customerId);

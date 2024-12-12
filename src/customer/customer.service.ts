@@ -43,4 +43,8 @@ export class CustomerService {
     }
     return customer;
   }
+
+  async findAll(): Promise<Customer[]> {
+    return this.customerModel.find();
+  }
 }
